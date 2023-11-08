@@ -28,6 +28,24 @@ body {
     color: black;
 }
 
+#search-results {
+    padding: 0px;
+    margin: auto;
+}
+
+#search-results li {
+    padding: 7px;
+    margin: 5px 0;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    list-style: none;
+    text-transform: uppercase;
+}
+
+
 .list {
     display: flex;
 	flex-direction: row;

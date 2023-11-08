@@ -87,4 +87,22 @@ class PokemonController extends Controller
             return collect();
         }
     }
+
+    protected function searchPokemonsAjax(Request $request)
+    {
+        $partialName = $request->input('search');
+
+        $response = Http::get("https://pokeapi.co/api/v2/pokemon?limit=1500");
+        if ($response->successful()) {
+            $json = $response->json();
+
+            $pokemonsData = collect($json['results'])->filter(function ($item) use ($partialName) {
+                return str_contains($item['name'], $partialName);
+            })->values();
+        } else {
+            return response()->json([]);
+        }
+
+        return $pokemonsData->toJson();
+    }
 }
