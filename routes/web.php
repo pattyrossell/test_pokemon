@@ -14,4 +14,6 @@ use App\Http\Controllers\PokemonController;
 |
 */
 
+Route::get('/searchPokemons/{search?}', [PokemonController::class, 'searchPokemonsAjax']);
+
 Route::get('/{page?}/{search?}', [PokemonController::class, 'index']);
