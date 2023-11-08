@@ -8,7 +8,7 @@ Asegúrate de tener instalado Docker y Docker Compose en tu máquina.
 ## Configuración
 1. Clonar el repositorio <br>
    ```
-   git clone https://github.com/tu-usuario/test_pokemon.git
+   git clone https://github.com/pattyrossell/test_pokemon.git
    cd test_pokemon
    ```
 
